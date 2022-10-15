@@ -1,6 +1,22 @@
 # Missing-Initialization
 Module detecting missing initialization used to check conditions.
 
+# Example
+```solidity
+contract A {
+    uint public state_variable = 0;
+    bool public initialized = false;
+    modifier not_initialized(){
+        require(initialized == false);
+        _;
+    }
+    function initialize(uint _state_variable) public not_initialized {
+        state_variable = _state_variable;
+    }
+}
+```
+Bob calls `initialize`. However, Alice can also call `initialize`.
+
 # Cases
 The following lists security incidents that could have been prevented using new detector
 
