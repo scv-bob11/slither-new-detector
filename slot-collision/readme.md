@@ -8,7 +8,7 @@ contract Proxy is TransparentUpgradeableProxy {
     // ... 
 }
 
-contract impl {
+contract Impl {
     bool isInit;
     address owner;
     
@@ -18,7 +18,7 @@ contract impl {
         isInit = true;
     }
     
-    function init(address _owner) initializer {
+    function init(address _owner) initializer public {
         owner = _owner;
     }
     // ...
