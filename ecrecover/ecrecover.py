@@ -6,15 +6,14 @@ Module detecting improper use of ecrecover.
 from slither.detectors.abstract_detector import AbstractDetector, DetectorClassification
 from slither.slithir.operations import Binary, BinaryType
 from slither.slithir.operations.solidity_call import SolidityCall
-from slither.slithir.variables.constant import Constant
 
 
-class Verification(AbstractDetector):
+class Ecrecover(AbstractDetector):
     """
     Detect improper use of ecrecover
     """
 
-    ARGUMENT = "ecrecover"  # slither will launch the detector with slither.py --mydetector
+    ARGUMENT = "ecrecover"
     HELP = "Return value of ecrecover is not checked. Signature does not contain a nonce."
     IMPACT = DetectorClassification.MEDIUM
     CONFIDENCE = DetectorClassification.LOW
@@ -109,7 +108,7 @@ Second, there is no verification of ecrecover's return value.
                                         find_erecovery = 1
                         if flag == 0:
                             info = [
-                                "no check erecovery return in ",
+                                "no check erecover return in ",
                                 function,
                                 "\n",
                             ]
