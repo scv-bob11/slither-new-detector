@@ -1,5 +1,5 @@
-# Voting-Amplication
-Module detecting voting amplication.
+# Voting-Amplification
+Module detecting voting amplification.
 
 # Example
 ```solidity
