@@ -1,4 +1,4 @@
-# Voting-Amplification
+# Ecrecover
 Module detecting improper use of ecrecover.
 
 # Example
