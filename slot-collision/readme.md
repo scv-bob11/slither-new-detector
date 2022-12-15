@@ -24,9 +24,9 @@ contract Impl {
     // ...
 }
 ```
-There is a collision between proxyOwner and isInit.
-By chance, isInit always is false.
-So attacker can change owner by calling init().
+There is a collision between proxyOwner and isInit.   
+By chance, isInit always is false.   
+So attacker can change owner by calling init().   
 
 # Cases
 The following lists security incidents that could have been prevented using new detector
