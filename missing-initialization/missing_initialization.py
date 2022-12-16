@@ -82,10 +82,11 @@ Bob calls `initialize`. However, Alice can also call `initialize`.
                     # Check if condition variable is initialized
                     if not self.check_state_variables_in_conditions_are_initialzed(f):
                         info = [
-                            "Condition variable is not initialized in ",
+                            "Condition variable is not initialized found in ",
                             f,
                             "\n",
                         ]
                         res = self.generate_result(info)
                         results.append(res)
         return results
+
